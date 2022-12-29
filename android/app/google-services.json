@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "240395649553",
+    "project_id": "social-media-instant-gram",
+    "storage_bucket": "social-media-instant-gram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240395649553:android:25c7477922075318ec27b0",
+        "android_client_info": {
+          "package_name": "com.example.social_media_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240395649553-dbhavh6s12f9ogseofe2an474968qm9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATy6c02YbbdOWgxBxicNz9Oz0DiPxDkaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240395649553-dbhavh6s12f9ogseofe2an474968qm9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
