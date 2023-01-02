@@ -4,6 +4,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:social_media_app/firebase_options.dart';
 import 'package:social_media_app/state/auth/providers/auth_state_provider.dart';
 import 'package:social_media_app/state/auth/providers/is_logged_in_provider.dart';
+import 'package:social_media_app/state/providers/is_loading_provider.dart';
+import 'package:social_media_app/views/components/loading/loading_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,6 +36,18 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.dark,
         home: Consumer(
           builder: (context, ref, child) {
+            ref.listen<bool>(
+              isLoadingProvider,
+              (_, isLoading) {
+                if (isLoading) {
+                  LoadingScreen.instance().show(
+                    context: context,
+                  );
+                } else {
+                  LoadingScreen.instance().hide();
+                }
+              },
+            );
             final isLoggedIn = ref.watch(isLoggedInProvider);
             if (isLoggedIn) {
               return const MainView();
