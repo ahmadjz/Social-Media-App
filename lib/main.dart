@@ -1,11 +1,18 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:social_media_app/firebase_options.dart';
+import 'package:social_media_app/state/auth/providers/auth_state_provider.dart';
+import 'package:social_media_app/state/auth/providers/is_logged_in_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,32 +21,86 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Instat-Gram',
-      darkTheme: ThemeData(
+        debugShowCheckedModeBanner: false,
+        title: 'Instat-Gram',
+        darkTheme: ThemeData(
+            brightness: Brightness.dark,
+            primarySwatch: Colors.blueGrey,
+            indicatorColor: Colors.blueGrey),
+        theme: ThemeData(
           brightness: Brightness.dark,
-          primarySwatch: Colors.blueGrey,
-          indicatorColor: Colors.blueGrey),
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
-      ),
-      themeMode: ThemeMode.dark,
-      home: const HomePage(),
-    );
+          primarySwatch: Colors.blue,
+        ),
+        themeMode: ThemeMode.dark,
+        home: Consumer(
+          builder: (context, ref, child) {
+            final isLoggedIn = ref.watch(isLoggedInProvider);
+            if (isLoggedIn) {
+              return const MainView();
+            }
+            return const LoginView();
+          },
+        ));
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class MainView extends StatelessWidget {
+  const MainView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomePage'),
-      ),
-      body: Container(),
-    );
+        appBar: AppBar(
+          title: const Text('Main Page'),
+        ),
+        body: Consumer(
+          builder: (context, ref, child) {
+            return TextButton(
+              onPressed: () async {
+                final result =
+                    await ref.read(authStateProvider.notifier).logOut();
+              },
+              child: const Text("Google"),
+            );
+          },
+        ));
+  }
+}
+
+class LoginView extends StatelessWidget {
+  const LoginView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Login'),
+        ),
+        body: Consumer(
+          builder: (context, ref, child) {
+            return Column(
+              children: [
+                TextButton(
+                  onPressed: () async {
+                    await ref
+                        .read(authStateProvider.notifier)
+                        .loginWithGoogle();
+                  },
+                  child: const Text("Google"),
+                ),
+                TextButton(
+                  onPressed: () async {
+                    await ref
+                        .read(authStateProvider.notifier)
+                        .loginWithFacebook();
+                  },
+                  child: const Text("Facebook"),
+                ),
+              ],
+            );
+          },
+        ));
   }
 }
