@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:social_media_app/views/components/constants/strings.dart';
 import 'package:social_media_app/views/components/loading/loading_screen_controller.dart';
+import 'package:social_media_app/views/constants/strings.dart';
 
 class LoadingScreen {
   LoadingScreen._sharedInstance();

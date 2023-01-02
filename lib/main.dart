@@ -6,6 +6,7 @@ import 'package:social_media_app/state/auth/providers/auth_state_provider.dart';
 import 'package:social_media_app/state/auth/providers/is_logged_in_provider.dart';
 import 'package:social_media_app/state/providers/is_loading_provider.dart';
 import 'package:social_media_app/views/components/loading/loading_screen.dart';
+import 'package:social_media_app/views/login/login_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,44 +76,6 @@ class MainView extends StatelessWidget {
                     await ref.read(authStateProvider.notifier).logOut();
               },
               child: const Text("Logout"),
-            );
-          },
-        ));
-  }
-}
-
-class LoginView extends StatelessWidget {
-  const LoginView({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('Login'),
-        ),
-        body: Consumer(
-          builder: (context, ref, child) {
-            return Column(
-              children: [
-                TextButton(
-                  onPressed: () async {
-                    await ref
-                        .read(authStateProvider.notifier)
-                        .loginWithGoogle();
-                  },
-                  child: const Text("Google"),
-                ),
-                TextButton(
-                  onPressed: () async {
-                    await ref
-                        .read(authStateProvider.notifier)
-                        .loginWithFacebook();
-                  },
-                  child: const Text("Facebook"),
-                ),
-              ],
             );
           },
         ));
