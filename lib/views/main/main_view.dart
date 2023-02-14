@@ -10,6 +10,7 @@ import 'package:social_media_app/views/components/dialogs/logout_dialog.dart';
 import 'package:social_media_app/views/constants/strings.dart';
 import 'package:social_media_app/views/create_new_posts/create_new_posts_view.dart';
 import 'package:social_media_app/views/tabs/user_posts/user_posts_view.dart';
+import '../tabs/search/search_view.dart';
 
 class MainView extends ConsumerStatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -126,7 +127,7 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(
           children: [
             UserPostsView(),
-            UserPostsView(),
+            SearchView(),
             UserPostsView(),
           ],
         ),
