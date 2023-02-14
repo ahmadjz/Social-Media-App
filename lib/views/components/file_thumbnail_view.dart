@@ -18,7 +18,7 @@ class FileThumbnailView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final thumbnail = ref.watch(
       thumbnailProvider(
-        thumbnailRequest,
+        request: thumbnailRequest,
       ),
     );
     return thumbnail.when(

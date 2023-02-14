@@ -6,9 +6,11 @@ import '../../constants/firebase_field_name.dart';
 import '../models/like.dart';
 import '../models/like_dislike_request.dart';
 
-final likeDislikePostProvider = FutureProvider.family
-    .autoDispose<bool, LikeDislikeRequest>(
-        (ref, LikeDislikeRequest request) async {
+part 'like_dislike_post_provider.g.dart';
+
+@riverpod
+Future<bool> likeDislikePost(LikeDislikePostRef ref,
+    {required LikeDislikeRequest request}) async {
   final query = FirebaseFirestore.instance
       .collection(FirebaseCollectionName.likes)
       .where(
@@ -54,4 +56,4 @@ final likeDislikePostProvider = FutureProvider.family
       return false;
     }
   }
-});
+}

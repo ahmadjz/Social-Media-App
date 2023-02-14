@@ -37,7 +37,7 @@ class LikeButton extends ConsumerWidget {
             );
             ref.read(
               likeDislikePostProvider(
-                likeRequest,
+                request: likeRequest,
               ),
             );
           },
