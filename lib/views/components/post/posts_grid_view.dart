@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app/state/posts/models/post.dart';
 import 'package:social_media_app/views/components/post/post_thumbnail_view.dart';
-import 'package:social_media_app/views/post_comments/post_comments_view.dart';
+import 'package:social_media_app/views/post_details/post_details_view.dart';
 
 class PostsGridView extends StatelessWidget {
   final Iterable<Post> posts;
@@ -26,14 +26,14 @@ class PostsGridView extends StatelessWidget {
         return PostThumbnailView(
           post: post,
           onTapped: () {
-            //TODO: Navigate to the post details view
-            if (post.allowsComments) {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => PostCommentsView(postId: post.postId),
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PostDetailsView(
+                  post: post,
                 ),
-              );
-            }
+              ),
+            );
           },
         );
       },
