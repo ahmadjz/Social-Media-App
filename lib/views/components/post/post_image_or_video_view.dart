@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/state/image_upload/models/file_type.dart';
-import 'package:social_media_app/state/posts/models/post.dart';
-import 'package:social_media_app/views/components/post/post_image_view.dart';
-import 'package:social_media_app/views/components/post/post_video_view.dart';
+
+import '../../../state/image_upload/models/file_type.dart';
+import '../../../state/posts/models/post.dart';
+import 'post_image_view.dart';
+import 'post_video_view.dart';
 
 class PostImageOrVideoView extends StatelessWidget {
   final Post post;

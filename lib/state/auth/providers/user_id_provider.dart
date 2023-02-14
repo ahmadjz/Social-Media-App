@@ -1,6 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/auth/providers/auth_state_provider.dart';
-import 'package:social_media_app/state/posts/typedefs/user_id.dart';
+
+import '../../posts/typedefs/user_id.dart';
+import 'auth_state_provider.dart';
 
 final userIdProvider = Provider<UserId?>(
   (ref) {

@@ -1,8 +1,9 @@
 import 'dart:collection';
 
 import 'package:flutter/foundation.dart' show immutable;
-import 'package:social_media_app/state/constants/firebase_field_name.dart';
-import 'package:social_media_app/state/posts/typedefs/user_id.dart';
+
+import '../../constants/firebase_field_name.dart';
+import '../../posts/typedefs/user_id.dart';
 
 @immutable
 class UserInfoModel extends MapView<String, String?> {

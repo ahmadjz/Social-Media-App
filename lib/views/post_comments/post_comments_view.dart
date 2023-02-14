@@ -3,17 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/auth/providers/user_id_provider.dart';
-import 'package:social_media_app/state/comments/models/post_comments_request.dart';
-import 'package:social_media_app/state/comments/providers/post_comments_provider.dart';
-import 'package:social_media_app/state/comments/providers/send_comment_provider.dart';
-import 'package:social_media_app/state/posts/typedefs/post_id.dart';
-import 'package:social_media_app/views/components/animations/empty_contents_with_text_animation_view.dart';
-import 'package:social_media_app/views/components/animations/error_animation_view.dart';
-import 'package:social_media_app/views/components/animations/loading_animation_view.dart';
-import 'package:social_media_app/views/components/comment/comment_tile.dart';
-import 'package:social_media_app/views/constants/strings.dart';
-import 'package:social_media_app/views/extensions/dismiss_keyboard.dart';
+
+import '../../state/auth/providers/user_id_provider.dart';
+import '../../state/comments/models/post_comments_request.dart';
+import '../../state/comments/providers/post_comments_provider.dart';
+import '../../state/comments/providers/send_comment_provider.dart';
+import '../../state/posts/typedefs/post_id.dart';
+import '../components/animations/empty_contents_with_text_animation_view.dart';
+import '../components/animations/error_animation_view.dart';
+import '../components/animations/loading_animation_view.dart';
+import '../components/comment/comment_tile.dart';
+import '../constants/strings.dart';
+import '../extensions/dismiss_keyboard.dart';
 
 class PostCommentsView extends HookConsumerWidget {
   final PostId postId;

@@ -2,10 +2,11 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/constants/firebase_collection_name.dart';
-import 'package:social_media_app/state/constants/firebase_field_name.dart';
-import 'package:social_media_app/state/posts/models/post.dart';
-import 'package:social_media_app/state/posts/typedefs/search_term.dart';
+
+import '../../constants/firebase_collection_name.dart';
+import '../../constants/firebase_field_name.dart';
+import '../models/post.dart';
+import '../typedefs/search_term.dart';
 
 final postsBySearchTermProvider =
     StreamProvider.family.autoDispose<Iterable<Post>, SearchTerm>(

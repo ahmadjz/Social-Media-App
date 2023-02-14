@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:social_media_app/enums/date_sorting.dart';
-import 'package:social_media_app/state/comments/models/post_comments_request.dart';
-import 'package:social_media_app/state/posts/models/post.dart';
-import 'package:social_media_app/state/posts/providers/can_current_user_delete_post_provider.dart';
-import 'package:social_media_app/state/posts/providers/delete_post_provider.dart';
-import 'package:social_media_app/state/posts/providers/specific_post_with_comments_provider.dart';
-import 'package:social_media_app/views/components/animations/error_animation_view.dart';
-import 'package:social_media_app/views/components/animations/loading_animation_view.dart';
-import 'package:social_media_app/views/components/animations/small_error_animation_view.dart';
-import 'package:social_media_app/views/components/comment/compact_comments_column.dart';
-import 'package:social_media_app/views/components/dialogs/alert_dialog_model.dart';
-import 'package:social_media_app/views/components/dialogs/delete_dialog.dart';
-import 'package:social_media_app/views/components/like_button.dart';
-import 'package:social_media_app/views/components/likes_count_view.dart';
-import 'package:social_media_app/views/components/post/post_date_view.dart';
-import 'package:social_media_app/views/components/post/post_display_name_and_message_view.dart';
-import 'package:social_media_app/views/components/post/post_image_or_video_view.dart';
-import 'package:social_media_app/views/constants/strings.dart';
-import 'package:social_media_app/views/post_comments/post_comments_view.dart';
+
+import '../../enums/date_sorting.dart';
+import '../../state/comments/models/post_comments_request.dart';
+import '../../state/posts/models/post.dart';
+import '../../state/posts/providers/can_current_user_delete_post_provider.dart';
+import '../../state/posts/providers/delete_post_provider.dart';
+import '../../state/posts/providers/specific_post_with_comments_provider.dart';
+import '../components/animations/error_animation_view.dart';
+import '../components/animations/loading_animation_view.dart';
+import '../components/animations/small_error_animation_view.dart';
+import '../components/comment/compact_comments_column.dart';
+import '../components/dialogs/alert_dialog_model.dart';
+import '../components/dialogs/delete_dialog.dart';
+import '../components/like_button.dart';
+import '../components/likes_count_view.dart';
+import '../components/post/post_date_view.dart';
+import '../components/post/post_display_name_and_message_view.dart';
+import '../components/post/post_image_or_video_view.dart';
+import '../constants/strings.dart';
+import '../post_comments/post_comments_view.dart';
 
 class PostDetailsView extends ConsumerStatefulWidget {
   final Post post;

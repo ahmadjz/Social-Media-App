@@ -1,4 +1,4 @@
-import 'package:social_media_app/state/image_upload/models/file_type.dart';
+import '../models/file_type.dart';
 
 extension CollectionName on FileType {
   String get collectionName {

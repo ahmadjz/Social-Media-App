@@ -5,17 +5,18 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:image/image.dart' as img;
-import 'package:social_media_app/state/constants/firebase_collection_name.dart';
-import 'package:social_media_app/state/image_upload/constants/constants.dart';
-import 'package:social_media_app/state/image_upload/exceptions/could_not_build_thumbnail_exception.dart';
-import 'package:social_media_app/state/image_upload/extensions/get_collection_name_from_file_type.dart';
-import 'package:social_media_app/state/image_upload/extensions/get_image_data_aspect_ratio.dart';
-import 'package:social_media_app/state/image_upload/models/file_type.dart';
-import 'package:social_media_app/state/image_upload/typedefs/is_loading.dart';
-import 'package:social_media_app/state/post_settings/models/post_setting.dart';
-import 'package:social_media_app/state/posts/models/post_payload.dart';
 import 'package:uuid/uuid.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
+
+import '../../constants/firebase_collection_name.dart';
+import '../../post_settings/models/post_setting.dart';
+import '../../posts/models/post_payload.dart';
+import '../constants/constants.dart';
+import '../exceptions/could_not_build_thumbnail_exception.dart';
+import '../extensions/get_collection_name_from_file_type.dart';
+import '../extensions/get_image_data_aspect_ratio.dart';
+import '../models/file_type.dart';
+import '../typedefs/is_loading.dart';
 
 class ImageUploadNotifier extends StateNotifier<IsLoading> {
   ImageUploadNotifier() : super(false);

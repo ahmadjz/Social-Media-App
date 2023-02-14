@@ -2,7 +2,8 @@ import 'dart:collection';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
-import 'package:social_media_app/state/constants/firebase_field_name.dart';
+
+import '../../constants/firebase_field_name.dart';
 
 @immutable
 class CommentPayload extends MapView<String, dynamic> {

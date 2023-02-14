@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/likes/providers/post_likes_count_provider.dart';
-import 'package:social_media_app/state/posts/typedefs/post_id.dart';
-import 'package:social_media_app/views/components/animations/small_error_animation_view.dart';
-import 'package:social_media_app/views/components/constants/strings.dart';
+
+import '../../state/likes/providers/post_likes_count_provider.dart';
+import '../../state/posts/typedefs/post_id.dart';
+import 'animations/small_error_animation_view.dart';
+import 'constants/strings.dart';
 
 class LikesCountView extends ConsumerWidget {
   final PostId postId;

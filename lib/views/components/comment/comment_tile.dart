@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/auth/providers/user_id_provider.dart';
-import 'package:social_media_app/state/comments/models/comment.dart';
-import 'package:social_media_app/state/comments/providers/delete_comment_provider.dart';
-import 'package:social_media_app/state/user_info/providers/user_info_model_provider.dart';
-import 'package:social_media_app/views/components/animations/small_error_animation_view.dart';
-import 'package:social_media_app/views/components/constants/strings.dart';
-import 'package:social_media_app/views/components/dialogs/alert_dialog_model.dart';
-import 'package:social_media_app/views/components/dialogs/delete_dialog.dart';
+
+import '../../../state/auth/providers/user_id_provider.dart';
+import '../../../state/comments/models/comment.dart';
+import '../../../state/comments/providers/delete_comment_provider.dart';
+import '../../../state/user_info/providers/user_info_model_provider.dart';
+import '../animations/small_error_animation_view.dart';
+import '../constants/strings.dart';
+import '../dialogs/alert_dialog_model.dart';
+import '../dialogs/delete_dialog.dart';
 
 class CommentTile extends ConsumerWidget {
   final Comment comment;

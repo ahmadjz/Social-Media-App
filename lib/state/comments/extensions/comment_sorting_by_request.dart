@@ -1,6 +1,6 @@
-import 'package:social_media_app/enums/date_sorting.dart';
-import 'package:social_media_app/state/comments/models/comment.dart';
-import 'package:social_media_app/state/comments/models/post_comments_request.dart';
+import '../../../enums/date_sorting.dart';
+import '../models/comment.dart';
+import '../models/post_comments_request.dart';
 
 extension Sorting on Iterable<Comment> {
   Iterable<Comment> applySortingFrom(RequestForPostAndComments request) {

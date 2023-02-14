@@ -2,9 +2,10 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/constants/firebase_collection_name.dart';
-import 'package:social_media_app/state/constants/firebase_field_name.dart';
-import 'package:social_media_app/state/posts/typedefs/post_id.dart';
+
+import '../../constants/firebase_collection_name.dart';
+import '../../constants/firebase_field_name.dart';
+import '../../posts/typedefs/post_id.dart';
 
 final postLikesCountProvider = StreamProvider.family.autoDispose<int, PostId>(
   (

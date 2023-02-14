@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/auth/providers/auth_state_provider.dart';
-import 'package:social_media_app/views/constants/app_colors.dart';
-import 'package:social_media_app/views/constants/strings.dart';
-import 'package:social_media_app/views/login/divider_with_margins.dart';
-import 'package:social_media_app/views/login/facebook_button.dart';
-import 'package:social_media_app/views/login/google_button.dart';
-import 'package:social_media_app/views/login/login_view_signup_links.dart';
+
+import '../../state/auth/providers/auth_state_provider.dart';
+import '../constants/app_colors.dart';
+import '../constants/strings.dart';
+import 'divider_with_margins.dart';
+import 'facebook_button.dart';
+import 'google_button.dart';
+import 'login_view_signup_links.dart';
 
 class LoginView extends ConsumerWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class LoginView extends ConsumerWidget {
                 Strings.logIntoYourAccount,
                 style: Theme.of(context)
                     .textTheme
-                    .subtitle1
+                    .titleMedium
                     ?.copyWith(height: 1.5),
               ),
               const SizedBox(

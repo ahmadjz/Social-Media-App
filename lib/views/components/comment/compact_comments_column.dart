@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/state/comments/models/comment.dart';
-import 'package:social_media_app/views/components/comment/compact_comment_tile.dart';
+
+import '../../../state/comments/models/comment.dart';
+import 'compact_comment_tile.dart';
 
 class CompactCommentsColumn extends StatelessWidget {
   final Iterable<Comment> comments;

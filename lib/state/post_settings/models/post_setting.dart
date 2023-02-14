@@ -1,4 +1,4 @@
-import 'package:social_media_app/state/post_settings/constants/constants.dart';
+import '../constants/constants.dart';
 
 enum PostSetting {
   allowLikes(

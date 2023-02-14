@@ -1,7 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
-import 'package:social_media_app/state/comments/models/comment.dart';
-import 'package:social_media_app/state/posts/models/post.dart';
+
+import '../../posts/models/post.dart';
+import 'comment.dart';
 
 @immutable
 class PostWithComments {

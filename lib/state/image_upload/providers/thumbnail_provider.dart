@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/image_upload/exceptions/could_not_build_thumbnail_exception.dart';
-import 'package:social_media_app/state/image_upload/extensions/get_image_aspect_ratio.dart';
-import 'package:social_media_app/state/image_upload/models/file_type.dart';
-import 'package:social_media_app/state/image_upload/models/image_with_aspect_ratio.dart';
-import 'package:social_media_app/state/image_upload/models/thumbnail_request.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
+
+import '../exceptions/could_not_build_thumbnail_exception.dart';
+import '../extensions/get_image_aspect_ratio.dart';
+import '../models/file_type.dart';
+import '../models/image_with_aspect_ratio.dart';
+import '../models/thumbnail_request.dart';
 
 final thumbnailProvider =
     FutureProvider.family.autoDispose<ImageWithAspectRatio, ThumbnailRequest>(

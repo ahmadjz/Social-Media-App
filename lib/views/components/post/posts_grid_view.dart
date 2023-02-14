@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/state/posts/models/post.dart';
-import 'package:social_media_app/views/components/post/post_thumbnail_view.dart';
-import 'package:social_media_app/views/post_details/post_details_view.dart';
+
+import '../../../state/posts/models/post.dart';
+import '../../post_details/post_details_view.dart';
+import 'post_thumbnail_view.dart';
 
 class PostsGridView extends StatelessWidget {
   final Iterable<Post> posts;

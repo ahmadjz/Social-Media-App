@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:social_media_app/state/posts/models/post.dart';
+
+import '../../../state/posts/models/post.dart';
 
 class PostImageView extends StatelessWidget {
   final Post post;

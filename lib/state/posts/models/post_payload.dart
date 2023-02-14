@@ -2,10 +2,11 @@ import 'dart:collection';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:social_media_app/state/image_upload/models/file_type.dart';
-import 'package:social_media_app/state/post_settings/models/post_setting.dart';
-import 'package:social_media_app/state/posts/models/post_key.dart';
-import 'package:social_media_app/state/posts/typedefs/user_id.dart';
+
+import '../../image_upload/models/file_type.dart';
+import '../../post_settings/models/post_setting.dart';
+import '../typedefs/user_id.dart';
+import 'post_key.dart';
 
 @immutable
 class PostPayload extends MapView<String, dynamic> {

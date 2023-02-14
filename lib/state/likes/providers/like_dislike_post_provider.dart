@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:social_media_app/state/constants/firebase_collection_name.dart';
-import 'package:social_media_app/state/constants/firebase_field_name.dart';
-import 'package:social_media_app/state/likes/models/like.dart';
-import 'package:social_media_app/state/likes/models/like_dislike_request.dart';
+
+import '../../constants/firebase_collection_name.dart';
+import '../../constants/firebase_field_name.dart';
+import '../models/like.dart';
+import '../models/like_dislike_request.dart';
 
 final likeDislikePostProvider = FutureProvider.family
     .autoDispose<bool, LikeDislikeRequest>(

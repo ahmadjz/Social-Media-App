@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/posts/models/post.dart';
-import 'package:social_media_app/state/user_info/providers/user_info_model_provider.dart';
-import 'package:social_media_app/views/components/animations/small_error_animation_view.dart';
-import 'package:social_media_app/views/components/rich_two_parts_text.dart';
+
+import '../../../state/posts/models/post.dart';
+import '../../../state/user_info/providers/user_info_model_provider.dart';
+import '../animations/small_error_animation_view.dart';
+import '../rich_two_parts_text.dart';
 
 class PostDisplayNameAndMessageView extends ConsumerWidget {
   final Post post;

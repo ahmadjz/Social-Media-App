@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:social_media_app/state/auth/providers/auth_state_provider.dart';
-import 'package:social_media_app/state/image_upload/helpers/image_picker_helper.dart';
-import 'package:social_media_app/state/image_upload/models/file_type.dart';
-import 'package:social_media_app/state/post_settings/providers/post_settings_provider.dart';
-import 'package:social_media_app/views/components/dialogs/alert_dialog_model.dart';
-import 'package:social_media_app/views/components/dialogs/logout_dialog.dart';
-import 'package:social_media_app/views/constants/strings.dart';
-import 'package:social_media_app/views/create_new_posts/create_new_posts_view.dart';
-import 'package:social_media_app/views/tabs/user_posts/user_posts_view.dart';
+
+import '../../state/auth/providers/auth_state_provider.dart';
+import '../../state/image_upload/helpers/image_picker_helper.dart';
+import '../../state/image_upload/models/file_type.dart';
+import '../../state/post_settings/providers/post_settings_provider.dart';
+import '../components/dialogs/alert_dialog_model.dart';
+import '../components/dialogs/logout_dialog.dart';
+import '../constants/strings.dart';
+import '../create_new_posts/create_new_posts_view.dart';
 import '../tabs/home/home_view.dart';
 import '../tabs/search/search_view.dart';
+import '../tabs/user_posts/user_posts_view.dart';
 
 class MainView extends ConsumerStatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -129,7 +130,7 @@ class _MainViewState extends ConsumerState<MainView> {
           children: [
             UserPostsView(),
             SearchView(),
-            UserPostsView(),
+            HomeView(),
           ],
         ),
       ),

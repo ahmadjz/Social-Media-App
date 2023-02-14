@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:social_media_app/enums/date_sorting.dart';
-import 'package:social_media_app/state/posts/typedefs/post_id.dart';
+
+import '../../../enums/date_sorting.dart';
+import '../../posts/typedefs/post_id.dart';
 
 @immutable
 class RequestForPostAndComments {

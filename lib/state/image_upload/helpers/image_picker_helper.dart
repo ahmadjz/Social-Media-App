@@ -2,7 +2,8 @@ import 'dart:io' show File;
 
 import 'package:flutter/foundation.dart' show immutable;
 import 'package:image_picker/image_picker.dart';
-import 'package:social_media_app/state/image_upload/extensions/to_file.dart';
+
+import '../extensions/to_file.dart';
 
 @immutable
 class ImagePickerHelper {
