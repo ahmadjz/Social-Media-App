@@ -18,7 +18,7 @@ Instant-Gram uses Firebase as its backend service. Firebase provides several too
 [Mobile Screen](https://drive.google.com/file/d/1oNVSsWxCU3ihrKa13k5-tLIqNkGvZIz0/view?usp=share_link)
 
 ## Getting Started
-To get started with Instant-Gram, clone the repository and open it in your preferred IDE. Make sure you have Flutter and Dart installed on your system. Run flutter pub get to install the required dependencies. To run the app, use the flutter run command.
+To get started with Instant-Gram, clone the repository and open it in your preferred IDE. Make sure you have Flutter and Dart installed on your system. Run `flutter pub get` to install the required dependencies. To run the app, use the `flutter run` command.
 
 ## Contact
 For questions or support, please contact me at Ahmadjzz99@gmail.com.
