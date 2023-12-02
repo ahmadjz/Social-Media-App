@@ -2,11 +2,11 @@
 Instant-Gram is a social media application built with Flutter and Firebase. It provides a platform to post photos or videos, like and comment on posts, and search for posts. Users can also disable the like or comments feature for their posts.
 
 ## Features
-Login with Facebook or Google
-Post photos or videos
-Like and comment on posts
-Disable like or comments for a post
-Search for posts
+* Login with Facebook or Google
+* Post photos or videos
+* Like and comment on posts
+* Disable like or comments for a post
+* Search for posts
 ## State Management
 Instant-Gram uses Riverpod for state management, which provides a simple and efficient way to manage app state. Riverpod is a Provider package and is used to handle dependency injection and state management in Flutter applications.
 The implementation of Riverpod in this project was heavily influenced by [Vandad Nahavandipoor's course](https://www.youtube.com/watch?v=vtGCteFYs4M&t) on Riverpod on Youtube.
